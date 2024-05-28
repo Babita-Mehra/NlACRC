@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>Calendar</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/animate.css">
+      <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.js"></script>
+      <script type="text/javascript" src="js/bootstrap-3.3.2.min.js"></script>  
+      <script src="js/bootstrap-multiselect.js"></script>  
+      <link rel="stylesheet" href="css/bootstrap-multiselect.css">
+   </head>
+   <body>
+      <header class="main_header">
+         <div class="navbar navbar-expand-xl">
+            <div class="container">
+               <div class="logo_wrap">
+                  <a class="navbar-brand" href="#">
+                  <img src="img/Logo.svg" alt="logo"> <span><small>North Los Angeles County</small><br>
+                  Regional Center</span>
+                  </a>
+               </div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="icon-bar top"></span>
+                  <span class="icon-bar midlde"></span>
+                  <span class="icon-bar last"></span>
+                  <p>MENU</p>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <div class="top_header_cont">
+                     <div class="top_menu">
+                        <ul class="top_inner_menu">
+                           <li> <a href="#"> eNews Sign Up </a> </li>
+                           <li> <a class="eye-link" href="#"> Transparency</a> </li>
+                        </ul>
+                        <div class="select_language">
+                           <select class="form_control">
+                              <option>Translate</option>
+                              <option>English</option>
+                              <option>Spain</option>
+                           </select>
+                        </div>
+                        <div class="top_search">
+                           <div class="search-box">
+                              <div class="search_input">
+                                 <form role="search" method="get" id="">
+                                    <div class="input-group">
+                                       <input type="text" id="" class="form-control" placeholder="Search" name="s">
+                                       <button class="btn btn-default" id="" type="submit">
+                                       <img src="img/search-icon.svg" alt="search icon">
+                                       </button>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="nav_bottom  ">
+                     <ul class="navbar-nav ">
+                        <li class="nav-item ">
+                           <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#">Consumers & Families</a>
+                           <ul class="dropdown-menu">
+                              <li><a href="#"> Events Calendar </a> </li>
+                              <li><a href="#"> District News </a> </li>
+                              <li><a href="#"> How To's, Guides And Webinars </a> </li>
+                           </ul>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#">Service Providers</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#"> Get Involved </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#">News & Events</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div class="main_wrapper" style="">
+         <div class="titile-wrap">
+            <div class="main_breadcrumb">
+               <div class="container">
+                  <nav aria-label="breadcrumb">
+                     <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                           <a href="#"> Home</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#">Section Title </a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Page title</li>
+                     </ol>
+                  </nav>
+               </div>
+            </div>
+            <div class="page_title text-center">
+               <h1>Calendar</h1>
+            </div>
+         </div>
+         <div class="calendar-wrap">
+            <div class="cal-top-sec">
+               <div class="container ">
+                  <div class="row mt_row">
+                     <div class="search_box">
+                        <form action="/search" role="search" method="get" id="searchform">
+                           <div class="input-group">
+                              <input type="text" id="searchbox" class="form-control" placeholder="Search for events" name="keys" aria-label="Search Box">
+                              <button class="btn btn-default" id="searchsubmits" type="submit">
+                              <img src="img/search-icon.svg" />
+                              </button>
+                              <div class="btn-wrap">
+                                 <button class="btn btn-default" id="searchsubmit" type="submit">
+                                 Find Meetings
+                                 </button>
+                                 <div class="hide-filter">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                                       <g clip-path="url(#clip0_1050_5708)">
+                                          <path d="M0.159844 2.0819C0.159844 2.17662 0.197472 2.26746 0.264448 2.33444C0.331426 2.40141 0.422267 2.43904 0.516987 2.43904L9.4827 2.43904C9.57742 2.43904 9.66826 2.40141 9.73524 2.33444C9.80222 2.26746 9.83984 2.17662 9.83984 2.0819C9.83984 1.98718 9.80222 1.89634 9.73524 1.82936C9.66826 1.76238 9.57742 1.72476 9.4827 1.72476L0.516987 1.72476C0.422267 1.72476 0.331426 1.76238 0.264448 1.82936C0.197472 1.89634 0.159844 1.98718 0.159844 2.0819Z" fill="black"/>
+                                          <path d="M2.16853 0.961893V3.20189C2.16853 3.29661 2.20615 3.38745 2.27313 3.45443C2.34011 3.52141 2.43095 3.55904 2.52567 3.55904C2.62039 3.55904 2.71123 3.52141 2.77821 3.45443C2.84518 3.38745 2.88281 3.29661 2.88281 3.20189V0.961893C2.88281 0.867173 2.84518 0.776332 2.77821 0.709355C2.71123 0.642378 2.62039 0.60475 2.52567 0.60475C2.43095 0.60475 2.34011 0.642378 2.27313 0.709355C2.20615 0.776332 2.16853 0.867173 2.16853 0.961893Z" fill="black"/>
+                                          <path d="M0.159844 7.53336C0.159844 7.62808 0.197472 7.71892 0.264448 7.7859C0.331426 7.85288 0.422267 7.8905 0.516987 7.8905L9.4827 7.8905C9.57742 7.8905 9.66826 7.85288 9.73524 7.7859C9.80222 7.71892 9.83984 7.62808 9.83984 7.53336C9.83984 7.43864 9.80222 7.3478 9.73524 7.28082C9.66826 7.21384 9.57742 7.17622 9.4827 7.17622L0.516987 7.17622C0.422267 7.17622 0.331426 7.21384 0.264448 7.28082C0.197472 7.3478 0.159844 7.43864 0.159844 7.53336Z" fill="black"/>
+                                          <path d="M7.11726 6.41336V8.65336C7.11726 8.74808 7.15488 8.83892 7.22186 8.90589C7.28884 8.97287 7.37968 9.0105 7.4744 9.0105C7.56912 9.0105 7.65996 8.97287 7.72694 8.90589C7.79392 8.83892 7.83154 8.74808 7.83154 8.65336V6.41336C7.83154 6.31863 7.79392 6.22779 7.72694 6.16082C7.65996 6.09384 7.56912 6.05621 7.4744 6.05621C7.37968 6.05621 7.28884 6.09384 7.22186 6.16082C7.15488 6.22779 7.11726 6.31863 7.11726 6.41336Z" fill="black"/>
+                                       </g>
+                                       <defs>
+                                          <clipPath id="clip0_1050_5708">
+                                             <rect width="10" height="10" fill="white" transform="matrix(0 -1 -1 0 10 10.5333)"/>
+                                          </clipPath>
+                                       </defs>
+                                    </svg>
+                                    Hide Filters
+                                 </div>
+                                 <div class="list_grid_view">
+                                    <ul class="list-unstyled">
+                                       <li class="init">List</li>
+                                       <li data-value="value 1"><a href="#" class="listIcon active">List</a> </li>
+                                       <li data-value="value 2"><a href="#" class="calIcon">Month</a></li>
+                                       <li data-value="value 3"><a href="#" class="gridIcon">Photo</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                     <div class="all-cat-wrap">
+                        <div class="example">
+                           <select name="langOpt[]" multiple id="langOpt">
+                              <p>Category</p>
+                              <option value="cheese">Cheese</option>
+                              <option value="tomatoes">Tomatoes</option>
+                              <option value="Mozzarella">Mozzarella</option>
+                           </select>
+                           <script>
+                              $('#langOpt').multiselect({
+                                 columns: 1,
+                                texts: {
+                                     placeholder: 'Select Languages'
+                                 }
+                              });
+                           </script>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="event_calendar_info">
+            <div class="container ">
+               <div class="row mt_row">
+                  <div class="col-lg-12 col_left">
+                     <div class="Calendar-wrap">
+                        <img src="img/calendar.jpg">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container event_list_info">
+            <div class="row mt_row">
+               <div class="title-up"> <img src="img/up-img.png" /></div>
+               <div class="evt_lst_row_wrap">
+                  <div class="evt_lst_row event_item">
+                     <div class="category blue">
+                        <span class="cat ">Special Event</span>
+                     </div>
+                     <div class="text_evt_block ">
+                        <div class="evt-date">APR <br><span>30</span></div>
+                        <div class="content-area">
+                           <h3>Title of Event That Needs Two Lines </h3>
+                           <p class="evt-time">7:30 pm - 9:30 pm
+                           </h4>                    
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="evt_lst_row_wrap">
+                  <div class="evt_lst_row event_item">
+                     <div class="category lightorange">
+                        <span class="cat ">Special Event</span>
+                     </div>
+                     <div class="text_evt_block ">
+                        <div class="evt-date">APR <br><span>30</span></div>
+                        <div class="content-area">
+                           <h3>Title of Event That Needs Two Lines </h3>
+                           <div class="cancel-info">
+                              CANCELLED
+                           </div>
+                           <p class="evt-time">7:30 pm - 9:30 pm
+                           </h4>                    
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="evt_lst_row_wrap">
+                  <div class="evt_lst_row event_item">
+                     <div class="category yellow">
+                        <span class="cat ">Special Event</span>
+                     </div>
+                     <div class="text_evt_block ">
+                        <div class="evt-date">APR <br><span>30</span></div>
+                        <div class="content-area">
+                           <h3>Title of Event That Needs Two Lines </h3>
+                           <p class="evt-time">7:30 pm - 9:30 pm
+                           </h4>                    
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="event-row event_grid_info" id="events-container">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-4 col-md-6 event_col">
+                     <div class="event_item">
+                        <div class="img_evt_block">
+                           <img src="img/event-img1.png" alt="">
+                        </div>
+                        <div class="category">
+                           <span class="cat">Special Event</span>
+                        </div>
+                        <div class="text_evt_block">
+                           <div class="evt-date">APR <br><span>30</span></div>
+                           <div class="content-area">
+                              <h3>Title of Event That Needs Two Lines </h3>
+                              <p class="evt-time">7:30 pm - 9:30 pm
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 event_col">
+                     <div class="event_item">
+                        <div class="img_evt_block">
+                           <img src="img/event-img1.png" alt="">
+                        </div>
+                        <div class="category yellow">
+                           <span class="cat ">Special Event</span>
+                        </div>
+                        <div class="text_evt_block">
+                           <div class="evt-date">APR <br><span>8</span></div>
+                           <div class="content-area">
+                              <h3>Title of Event That Needs Two Lines </h3>
+                              <p class="evt-time">7:30 pm - 9:30 pm
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 event_col">
+                     <div class="event_item">
+                        <div class="img_evt_block">
+                           <img src="img/event-img1.png" alt="">
+                        </div>
+                        <div class="category lightorange">
+                           <span class="cat">Special Event</span>
+                        </div>
+                        <div class="text_evt_block">
+                           <div class="evt-date">APR <br><span>5</span></div>
+                           <div class="content-area">
+                              <h3>Title of Event That Needs Two Lines </h3>
+                              <p class="evt-time">7:30 pm - 9:30 pm
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <footer class="footer ">
+         <div class="footer-content">
+            <div class="container ">
+               <div class="footer-row row ">
+                  <div class="foot_col  ">
+                     <div class="foot_logo ">
+                        <img src="img/footer-logo.svg " alt="logo "> <span>North Los Angeles County<br>
+                        Regional Center</span>
+                     </div>
+                     <div class="address">
+                        San Fernando Valley (Main office)<br>
+                        9200 Oakdale Ave., Suite 100<br>
+                        Chatsworth, CA 91311<br>
+                        (818) 778-1900<br>
+                        fax (818) 756-6140
+                     </div>
+                  </div>
+                  <div class="foot_col   ">
+                     <div class="footmenu ">
+                        <ul class="">
+                           <li> <a href="# ">Contact</a> </li>
+                           <li> <a href="# ">Service Providers</a></li>
+                           <li> <a href="# ">Consumers & Family</a></li>
+                        </ul>
+                     </div>
+                     <div class="fotr-eye">
+                        <ul>
+                           <li><a class="eye-link" href="#"> Transparency</a></li>
+                        </ul>
+                     </div>
+                     <div class="copyright ">
+                        <p>©2024 NLACRC | All Rights Reserved | Privacy Policy & Terms of Use</p>
+                     </div>
+                  </div>
+                  <div class="foot_col  ">
+                     <div class="foot_media ">
+                        <ul>
+                           <li>
+                              <a href=""><img src="img/facebook.svg" alt=""> </a>
+                           </li>
+                           <li>
+                              <a href=""><img src="img/instagram.svg" alt=""> </a>
+                           </li>
+                           <li>
+                              <a href=""><img src="img/twitter.svg" alt=""> </a>
+                           </li>
+                           <li>
+                              <a href=""><img src="img/linkedin.svg" alt=""> </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script src="js/jquery.js"></script>
+      <script src="js/popper.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/expand.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/owlmain.js"></script>
+      <script>
+         $(document).on("scroll", function() {
+             if ($(document).scrollTop() > 0) {
+                 $(".main_header").addClass("shrink");
+         
+             } else {
+                 $(".main_header").removeClass("shrink");
+         
+             }
+         });
+      </script>
+      <script>
+         (function($) {
+             $(".gridIcon ").click(function() {
+                 $(".news_grid_info , .event_grid_info").css("display", "block");
+                 $(".news_list_info , .event_list_info,.event_calendar_info").css("display", "none");
+             });
+         
+             $(".listIcon  ").click(function() {
+                 $(".news_grid_info, .event_grid_info,.event_calendar_info").css("display", "none");
+                 $(".news_list_info, .event_list_info").css("display", "block");
+             });
+         
+             $(".calIcon   ").click(function() {
+                 $(".event_grid_info,.event_list_info").css("display", "none");
+                 $(".event_calendar_info").css("display", "block");
+             });
+             $(".list_grid_view  a").on("click", function() {
+         
+                 $(this).siblings().removeClass('active');
+                 $(this).addClass('active')
+         
+             });
+         
+         })(jQuery);
+      </script>
+      <script>
+         (function($) {
+             /* $('.accordion_event > li:eq(0) .acco_title').addClass('active').next().slideDown();*/
+         
+             $('.acc__main .acc__title').click(function(j) {
+                 var dropDown = $(this).closest('.acc__card').find('.acc__panel');
+         
+                 $(this).closest('.acc__main').find('.acc__panel').not(dropDown).slideUp();
+         
+                 if ($(this).hasClass('active')) {
+                     $(this).removeClass('active');
+                 } else {
+                     $(this).closest('.acc__main').find('.acc__title.active').removeClass('active');
+                     $(this).addClass('active');
+                 }
+         
+                 dropDown.stop(false, true).slideToggle();
+         
+                 j.preventDefault();
+             });
+         })(jQuery);
+      </script>
+      <script>
+         (function($) {
+             /* $('.accordion_event > li:eq(0) .acco_title').addClass('active').next().slideDown();*/
+         
+             $('.service_acco .main_acco_sv').click(function(j) {
+                 var dropDown = $(this).closest('.accordion_bk').find('.acco_panel_sv');
+         
+                 $(this).closest('.service_acco').find('.acco_panel').not(dropDown).slideUp();
+         
+                 if ($(this).hasClass('active')) {
+                     $(this).removeClass('active');
+                 } else {
+                     $(this).closest('.service_acco').find('.main_acco_sv.active').removeClass('active');
+                     $(this).addClass('active');
+                 }
+         
+                 dropDown.stop(false, true).slideToggle();
+         
+                 j.preventDefault();
+             });
+         })(jQuery);
+         (function($) {
+             /* $('.accordion_event > li:eq(0) .acco_title').addClass('active').next().slideDown();*/
+         
+             $('.accordion_era .main_acco_title').click(function(j) {
+                 var dropDown = $(this).closest('.accordion_block').find('.acco_panel');
+         
+                 $(this).closest('.accordion_era').find('.acco_panel').not(dropDown).slideUp();
+         
+                 if ($(this).hasClass('active')) {
+                     $(this).removeClass('active');
+                 } else {
+                     $(this).closest('.accordion_era').find('.main_acco_title.active').removeClass('active');
+                     $(this).addClass('active');
+                 }
+         
+                 dropDown.stop(false, true).slideToggle();
+         
+                 j.preventDefault();
+             });
+         })(jQuery);
+      </script>
+      <script>
+         $(".list-unstyled").on("click", ".init", function() {
+         $(this).closest(".list-unstyled").children('li:not(.init)').toggle();
+         });
+         
+         var allOptions = $(".list-unstyled").children('li:not(.init)');
+         $(".list-unstyled").on("click", "li:not(.init)", function() {
+         allOptions.removeClass('selected');
+         $(this).addClass('selected');
+         $(".list-unstyled").children('.init').html($(this).html());
+         allOptions.toggle();
+         });
+      </script>
+   </body>
+</html>
